@@ -55,7 +55,7 @@ Se compară după 4 criterii: localizare, temperaturi, precipitații, vânturi (
 
 | Criteriu | Ecuatorială | Tropical-uscată | Tropical-umedă | Subpolară |
 |---|---|---|---|---|
-| Localizare | în jurul Ecuatorului: Pen. Malacca, insulele Indoneziei | sud-vestul Asiei: Pen. Arabia, Pod. Iranian, deșertul Thar | sudul și sud-estul Asiei: Pen. India, Indochina | nordul Asiei, țărmul Oceanului Arctic |
+| Localizare | în jurul Ecuatorului: sudul Pen. Malacca, Indonezia | sud-vestul Asiei: Pen. Arabia, Pod. Iranian, deșertul Thar | sudul și sud-estul Asiei: Pen. India, Indochina | nordul Asiei, țărmul Oceanului Arctic |
 | Temperaturi | ridicate și constante (25–28°C), fără anotimpuri | foarte ridicate vara (peste 40°C), diferențe mari zi–noapte | ridicate tot anul (peste 20°C) | ierni lungi și geroase, veri scurte și răcoroase |
 | Precipitații | foarte bogate (peste 2 000 mm), aproape zilnic | foarte reduse (sub 200 mm) | bogate, vara, în sezonul musonic | reduse (200–300 mm), mai ales zăpadă |
 | Vânturi | calm ecuatorial, aer ascendent | alizee uscate, vânturi fierbinți | musonii (vara dinspre ocean, iarna dinspre uscat) | vânturi polare, reci |

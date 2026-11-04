@@ -108,7 +108,7 @@ L = {
    "Vânturi: musonii. Vara bat dinspre ocean (umed), iarna dinspre uscat (uscat).",
    "Vegetație: păduri musonice, junglă, savane. Animale: tigrul, elefantul indian."]),
   ("Zona ecuatorială", [
-   "Localizare: în jurul Ecuatorului – Peninsula Malacca și insulele Indoneziei.",
+   "Localizare: în jurul Ecuatorului – în sudul Peninsulei Malacca și în Indonezia.",
    "Temperaturi ridicate și constante tot anul (medii de 25–28°C), fără anotimpuri.",
    "Precipitații foarte bogate (peste 2 000 mm/an), aproape zilnic, sub formă de averse.",
    "Vânturi: calm ecuatorial – aerul cald și umed urcă (mișcări ascendente).",
@@ -225,7 +225,7 @@ af(2, "C-5", "n1", "Peninsula Asia Mică o întâlnim în partea de vest a Asiei
 ZONE = ["ecuatoriala", "tropical_uscata", "tropical_umeda", "subpolara"]
 CRITERII = [
  ("Localizare", {
-   "ecuatoriala": "în jurul Ecuatorului: Peninsula Malacca și insulele Indoneziei",
+   "ecuatoriala": "în jurul Ecuatorului: sudul Peninsulei Malacca și Indonezia",
    "tropical_uscata": "în sud-vestul Asiei: Peninsula Arabia, Podișul Iranian, deșertul Thar",
    "tropical_umeda": "în sudul și sud-estul Asiei: peninsulele India și Indochina",
    "subpolara": "în nordul Asiei, de-a lungul țărmului Oceanului Arctic"}),
