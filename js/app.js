@@ -20,7 +20,7 @@ export function antet() {
     s.porecla ? h('div', { class: 'stat-antet' },
       h('span', { class: 'pastila', title: 'Seria de zile' }, '🔥 ', s.seria.zile || 0),
       h('a', { class: 'pastila', href: '#/profil', title: `Rang: ${r.nume}` }, r.icon, ' ', h('span', { class: 'ascuns-mic' }, r.nume + ' · '), s.xp, ' XP'),
-      h('a', { class: 'pastila avatar', href: '#/profil', 'aria-label': 'Profil' }, s.avatar)) : null);
+      h('a', { class: 'pastila avatar', href: '#/profil', 'aria-label': 'Profil' }, s.avatar)) : '');
 }
 
 // ---------------------------------------------------------------- router
