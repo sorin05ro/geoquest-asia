@@ -1,0 +1,62 @@
+{
+ "harti": {
+  "t1": {
+   "test": 1,
+   "imagine": "assets/harta-t1.webp",
+   "imagine_png": "assets/harta-t1.png",
+   "latime": 1054,
+   "inaltime": 1395,
+   "marcaje": {
+    "1": [
+     531,
+     362
+    ],
+    "2": [
+     227,
+     697
+    ],
+    "3": [
+     280,
+     585
+    ],
+    "A": [
+     290,
+     966
+    ],
+    "B": [
+     810,
+     1171
+    ]
+   }
+  },
+  "t2": {
+   "test": 2,
+   "imagine": "assets/harta-t2.webp",
+   "imagine_png": "assets/harta-t2.png",
+   "latime": 1054,
+   "inaltime": 1395,
+   "marcaje": {
+    "1": [
+     620,
+     608
+    ],
+    "2": [
+     731,
+     266
+    ],
+    "3": [
+     420,
+     610
+    ],
+    "A": [
+     444,
+     993
+    ],
+    "B": [
+     985,
+     615
+    ]
+   }
+  }
+ }
+}

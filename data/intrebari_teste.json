@@ -1,0 +1,774 @@
+[
+ {
+  "id": "T1-A-a",
+  "test": 1,
+  "subiect": "A",
+  "slot": "A-a",
+  "puncte": 12,
+  "tip": "harta_test",
+  "taram": "t1",
+  "nivel": "n3",
+  "enunt": "Analizând harta, precizați elementele hidrografice notate cu cifrele 1, 2, 3.",
+  "origine": "test",
+  "explicatie_geo": "1 – Enisei curge spre nord, în Oceanul Arctic, și primește apele lacului Baikal prin Angara; 2 – Indus coboară din Tibet spre Marea Arabiei; 3 – Lacul Aral se află la est de Marea Caspică.",
+  "sursa": "Obi, Enisei și Lena se varsă în Oceanul Arctic. Indus se varsă în Marea Arabiei. Lacul Aral se află la est de Marea Caspică.",
+  "lectie": "ape",
+  "dificultate": 2,
+  "harta": "t1",
+  "optiuni": [
+   "Enisei",
+   "Indus",
+   "Lacul Aral",
+   "Huang He",
+   "Lena",
+   "Lacul Balhaș",
+   "Obi",
+   "Gange",
+   "Amur",
+   "Lacul Baikal",
+   "Yangtze",
+   "Marea Caspică"
+  ],
+  "itemi": [
+   {
+    "eticheta": "1",
+    "corect": "Enisei"
+   },
+   {
+    "eticheta": "2",
+    "corect": "Indus"
+   },
+   {
+    "eticheta": "3",
+    "corect": "Lacul Aral"
+   }
+  ]
+ },
+ {
+  "id": "T1-A-b",
+  "test": 1,
+  "subiect": "A",
+  "slot": "A-b",
+  "puncte": 8,
+  "tip": "harta_test",
+  "taram": "t1",
+  "nivel": "n3",
+  "enunt": "Analizând harta, precizați peninsula și insula notate cu literele A și B.",
+  "origine": "test",
+  "explicatie_geo": "A – Peninsula Hindustan, în sudul Asiei, între Marea Arabiei și Golful Bengal; B – Insula Borneo (Kalimantan), cea mai mare insulă a Asiei, pe Ecuator.",
+  "sursa": "Peninsula Hindustan se află în sudul Asiei. Insula Borneo (Kalimantan) este cea mai mare insulă a Asiei.",
+  "lectie": "pozitie",
+  "dificultate": 2,
+  "harta": "t1",
+  "optiuni": [
+   "Peninsula Hindustan",
+   "Insula Borneo (Kalimantan)",
+   "Golful Bengal",
+   "Arhipelagul Japonez",
+   "Peninsula Arabia",
+   "Peninsula Indochina",
+   "Peninsula Malacca",
+   "Insula Sri Lanka",
+   "Golful Persic",
+   "Arhipelagul Filipine"
+  ],
+  "itemi": [
+   {
+    "eticheta": "A",
+    "corect": "Peninsula Hindustan"
+   },
+   {
+    "eticheta": "B",
+    "corect": "Insula Borneo (Kalimantan)"
+   }
+  ]
+ },
+ {
+  "id": "T2-A-a",
+  "test": 2,
+  "subiect": "A",
+  "slot": "A-a",
+  "puncte": 12,
+  "tip": "harta_test",
+  "taram": "t1",
+  "nivel": "n3",
+  "enunt": "Analizând harta, precizați elementele hidrografice notate cu cifrele 1, 2, 3.",
+  "origine": "test",
+  "explicatie_geo": "1 – Huang He (Fluviul Galben), cu marea sa buclă din nordul Chinei; 2 – Lena, care se varsă printr-o deltă în Oceanul Arctic; 3 – Lacul Balhaș, lac alungit la est de Aral.",
+  "sursa": "Huang He se varsă în Oceanul Pacific. Lena se varsă în Oceanul Arctic. Lacul Balhaș este un lac alungit, la est de Aral.",
+  "lectie": "ape",
+  "dificultate": 2,
+  "harta": "t2",
+  "optiuni": [
+   "Enisei",
+   "Indus",
+   "Lacul Aral",
+   "Huang He",
+   "Lena",
+   "Lacul Balhaș",
+   "Obi",
+   "Gange",
+   "Amur",
+   "Lacul Baikal",
+   "Yangtze",
+   "Marea Caspică"
+  ],
+  "itemi": [
+   {
+    "eticheta": "1",
+    "corect": "Huang He"
+   },
+   {
+    "eticheta": "2",
+    "corect": "Lena"
+   },
+   {
+    "eticheta": "3",
+    "corect": "Lacul Balhaș"
+   }
+  ]
+ },
+ {
+  "id": "T2-A-b",
+  "test": 2,
+  "subiect": "A",
+  "slot": "A-b",
+  "puncte": 8,
+  "tip": "harta_test",
+  "taram": "t1",
+  "nivel": "n3",
+  "enunt": "Analizând harta, precizați golful și arhipelagul notate cu literele A și B.",
+  "origine": "test",
+  "explicatie_geo": "A – Golful Bengal, cel mai mare golf de pe Glob, la est de Peninsula Hindustan; B – Arhipelagul Japonez, în estul Asiei, în Oceanul Pacific.",
+  "sursa": "Golful Bengal este cel mai mare golf de pe Glob. Arhipelagul Japonez se află în Oceanul Pacific.",
+  "lectie": "pozitie",
+  "dificultate": 2,
+  "harta": "t2",
+  "optiuni": [
+   "Peninsula Hindustan",
+   "Insula Borneo (Kalimantan)",
+   "Golful Bengal",
+   "Arhipelagul Japonez",
+   "Peninsula Arabia",
+   "Peninsula Indochina",
+   "Peninsula Malacca",
+   "Insula Sri Lanka",
+   "Golful Persic",
+   "Arhipelagul Filipine"
+  ],
+  "itemi": [
+   {
+    "eticheta": "A",
+    "corect": "Golful Bengal"
+   },
+   {
+    "eticheta": "B",
+    "corect": "Arhipelagul Japonez"
+   }
+  ]
+ },
+ {
+  "id": "T1-B-1",
+  "test": 1,
+  "subiect": "B",
+  "slot": "B-1",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t1",
+  "nivel": "n1",
+  "enunt": "Asia se învecinează la est cu:",
+  "origine": "test",
+  "explicatie_geo": "La est, Asia este scăldată de Oceanul Pacific. La nord are Oceanul Arctic, la sud Oceanul Indian.",
+  "sursa": "Est: Oceanul Pacific.",
+  "lectie": "pozitie",
+  "dificultate": 2,
+  "variante": [
+   "Oceanul Pacific",
+   "Oceanul Indian",
+   "Marea Caspica",
+   "Oceanul Arctic"
+  ],
+  "corect": 0
+ },
+ {
+  "id": "T2-B-1",
+  "test": 2,
+  "subiect": "B",
+  "slot": "B-1",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t1",
+  "nivel": "n1",
+  "enunt": "Asia se învecinează la sud cu:",
+  "origine": "test",
+  "explicatie_geo": "La sud, Asia este scăldată de Oceanul Indian. La est are Oceanul Pacific, la nord Oceanul Arctic.",
+  "sursa": "Sud: Oceanul Indian.",
+  "lectie": "pozitie",
+  "dificultate": 2,
+  "variante": [
+   "Oceanul Pacific",
+   "Oceanul Indian",
+   "Marea Caspica",
+   "Oceanul Arctic"
+  ],
+  "corect": 1
+ },
+ {
+  "id": "T1-B-2",
+  "test": 1,
+  "subiect": "B",
+  "slot": "B-2",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t1",
+  "nivel": "n1",
+  "enunt": "Punctul extrem nordic al Asiei este:",
+  "origine": "test",
+  "explicatie_geo": "Capul Celiuskin, în Peninsula Taimîr, este punctul extrem nordic. Dejnev este în est, Baba în vest, iar Roca aparține Europei.",
+  "sursa": "Nord: Capul Celiuskin (Peninsula Taimîr).",
+  "lectie": "pozitie",
+  "dificultate": 2,
+  "variante": [
+   "Capul Roca",
+   "Capul Baba",
+   "Capul Dejnev",
+   "Capul Celeuskin"
+  ],
+  "corect": 3
+ },
+ {
+  "id": "T2-B-2",
+  "test": 2,
+  "subiect": "B",
+  "slot": "B-2",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t1",
+  "nivel": "n1",
+  "enunt": "Punctul extrem estic al Asiei este:",
+  "origine": "test",
+  "explicatie_geo": "Capul Dejnev, în Peninsula Ciukotka, la Strâmtoarea Bering, este punctul extrem estic. Celiuskin este în nord, Baba în vest, iar Roca aparține Europei.",
+  "sursa": "Est: Capul Dejnev (Peninsula Ciukotka).",
+  "lectie": "pozitie",
+  "dificultate": 2,
+  "variante": [
+   "Capul Roca",
+   "Capul Baba",
+   "Capul Dejnev",
+   "Capul Celeuskin"
+  ],
+  "corect": 2
+ },
+ {
+  "id": "T1-B-3",
+  "test": 1,
+  "subiect": "B",
+  "slot": "B-3",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t1",
+  "nivel": "n2",
+  "enunt": "Cel mai înalt podiș este:",
+  "origine": "test",
+  "explicatie_geo": "Dintre variantele date, Pamirul – „Acoperișul lumii” – este cel mai înalt (peste 4 000 m). Dekan, Iranian și Arabiei sunt mult mai joase.",
+  "sursa": "Pamirul este numit „Acoperișul lumii”.",
+  "lectie": "relief",
+  "dificultate": 2,
+  "variante": [
+   "Podișul Dekan",
+   "Podișul Pamir",
+   "Podișul Iranian",
+   "Podișul Arabiei"
+  ],
+  "corect": 1
+ },
+ {
+  "id": "T2-B-3",
+  "test": 2,
+  "subiect": "B",
+  "slot": "B-3",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t1",
+  "nivel": "n2",
+  "enunt": "Cel mai înalt podiș este:",
+  "origine": "test",
+  "explicatie_geo": "Podișul Tibet (4 000–5 000 m) este cel mai înalt și mai întins podiș înalt de pe Glob.",
+  "sursa": "Podișul Tibet este cel mai înalt și cel mai întins podiș înalt de pe Glob.",
+  "lectie": "relief",
+  "dificultate": 2,
+  "variante": [
+   "Podișul Dekan",
+   "Podișul Tibet",
+   "Podișul Iranian",
+   "Podișul Arabiei"
+  ],
+  "corect": 1
+ },
+ {
+  "id": "T1-B-4",
+  "test": 1,
+  "subiect": "B",
+  "slot": "B-4",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t1",
+  "nivel": "n2",
+  "enunt": "Străbate Câmpia Indo-Gangetică râul:",
+  "origine": "test",
+  "explicatie_geo": "Gange (și Indus) străbat Câmpia Indo-Gangetică – de aici îi vine numele. Huang He este în China, Amur și Obi sunt în nord.",
+  "sursa": "Câmpia Indo-Gangetică este străbătută de Indus și Gange.",
+  "lectie": "relief",
+  "dificultate": 2,
+  "variante": [
+   "Huang He",
+   "Amur",
+   "Gange",
+   "Obi"
+  ],
+  "corect": 2
+ },
+ {
+  "id": "T2-B-4",
+  "test": 2,
+  "subiect": "B",
+  "slot": "B-4",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t1",
+  "nivel": "n2",
+  "enunt": "Străbate Câmpia Indo-Gangetică râul:",
+  "origine": "test",
+  "explicatie_geo": "Indus (și Gange) străbat Câmpia Indo-Gangetică – de aici îi vine numele. Huang He este în China, Amur și Obi sunt în nord.",
+  "sursa": "Câmpia Indo-Gangetică este străbătută de Indus și Gange.",
+  "lectie": "relief",
+  "dificultate": 2,
+  "variante": [
+   "Huang He",
+   "Amur",
+   "Indus",
+   "Obi"
+  ],
+  "corect": 2
+ },
+ {
+  "id": "T1-B-5",
+  "test": 1,
+  "subiect": "B",
+  "slot": "B-5",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t2",
+  "nivel": "n4",
+  "enunt": "Renul trăiește în climatul:",
+  "origine": "test",
+  "explicatie_geo": "Renul trăiește în tundră, în climatul subpolar din nordul Asiei.",
+  "sursa": "Animale în tundră: renul, vulpea polară, lemingul.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "variante": [
+   "ecuatorial",
+   "tropical",
+   "subpolar",
+   "temperat"
+  ],
+  "corect": 2
+ },
+ {
+  "id": "T2-B-5",
+  "test": 2,
+  "subiect": "B",
+  "slot": "B-5",
+  "puncte": 4,
+  "tip": "grila",
+  "taram": "t2",
+  "nivel": "n4",
+  "enunt": "Ursul brun trăiește în climatul:",
+  "origine": "test",
+  "explicatie_geo": "Ursul brun trăiește în taiga, în climatul temperat.",
+  "sursa": "Animale în taiga: ursul brun, lupul, râsul, samurul.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "variante": [
+   "ecuatorial",
+   "tropical",
+   "subpolar",
+   "temperat"
+  ],
+  "corect": 3
+ },
+ {
+  "id": "T1-C-1",
+  "test": 1,
+  "subiect": "C",
+  "slot": "C-1",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t1",
+  "nivel": "n2",
+  "enunt": "Munții Himalaya sunt cei mai înalți munți ai Asiei.",
+  "origine": "test",
+  "explicatie_geo": "Adevărat. Himalaya sunt cei mai înalți munți ai Asiei și ai Globului (Vf. Everest, 8 848 m).",
+  "sursa": "Munții Himalaya sunt cei mai înalți munți ai Asiei și ai Globului.",
+  "lectie": "relief",
+  "dificultate": 2,
+  "adevarat": true
+ },
+ {
+  "id": "T2-C-1",
+  "test": 2,
+  "subiect": "C",
+  "slot": "C-1",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t1",
+  "nivel": "n1",
+  "enunt": "Munții Himalaya sunt limita dintre Europa și Asia.",
+  "origine": "test",
+  "explicatie_geo": "Fals. Limita dintre Europa și Asia trece prin Munții Ural. Himalaya se află în sudul Asiei.",
+  "sursa": "Limita cu Europa trece prin Munții Ural, râul Ural, Marea Caspică și Munții Caucaz.",
+  "lectie": "pozitie",
+  "dificultate": 2,
+  "adevarat": false
+ },
+ {
+  "id": "T1-C-2",
+  "test": 1,
+  "subiect": "C",
+  "slot": "C-2",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t1",
+  "nivel": "n2",
+  "enunt": "Lacul Baikal este cel mai sărat lac.",
+  "origine": "test",
+  "explicatie_geo": "Fals. Baikal este cel mai ADÂNC lac de pe Glob și are apă dulce. Marea Moartă este unul dintre cele mai sărate lacuri.",
+  "sursa": "Lacul Baikal este cel mai adânc lac de pe Glob. Nu este cel mai sărat lac.",
+  "lectie": "ape",
+  "dificultate": 2,
+  "adevarat": false
+ },
+ {
+  "id": "T2-C-2",
+  "test": 2,
+  "subiect": "C",
+  "slot": "C-2",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t1",
+  "nivel": "n2",
+  "enunt": "Lacul Baikal este cel mai adânc lac.",
+  "origine": "test",
+  "explicatie_geo": "Adevărat. Baikal este cel mai adânc lac de pe Glob (1 642 m).",
+  "sursa": "Lacul Baikal este cel mai adânc lac de pe Glob (1 642 m).",
+  "lectie": "ape",
+  "dificultate": 2,
+  "adevarat": true
+ },
+ {
+  "id": "T1-C-3",
+  "test": 1,
+  "subiect": "C",
+  "slot": "C-3",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t2",
+  "nivel": "n4",
+  "enunt": "Mușchi, licheni, arbuști pitici întâlnim în zona de taiga.",
+  "origine": "test",
+  "explicatie_geo": "Fals. Mușchii, lichenii și arbuștii pitici sunt specifici tundrei. Taiga este pădurea de conifere (pin, brad, zadă).",
+  "sursa": "Mușchii, lichenii și arbuștii pitici sunt specifici tundrei, nu taigăi.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "adevarat": false
+ },
+ {
+  "id": "T2-C-3",
+  "test": 2,
+  "subiect": "C",
+  "slot": "C-3",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t2",
+  "nivel": "n4",
+  "enunt": "Pin, brad, zadă întâlnim în zona de taiga.",
+  "origine": "test",
+  "explicatie_geo": "Adevărat. Taiga este pădurea de conifere: pin, brad, molid, zadă.",
+  "sursa": "Taiga este pădurea de conifere: pin, brad, molid, zadă.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "adevarat": true
+ },
+ {
+  "id": "T1-C-4",
+  "test": 1,
+  "subiect": "C",
+  "slot": "C-4",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t2",
+  "nivel": "n4",
+  "enunt": "Zona de vegetație de stepă se caracterizează prin vegetație ierboasă.",
+  "origine": "test",
+  "explicatie_geo": "Adevărat. Stepa este zona vegetației ierboase, în climatul temperat.",
+  "sursa": "Stepa are vegetație ierboasă.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "adevarat": true
+ },
+ {
+  "id": "T2-C-4",
+  "test": 2,
+  "subiect": "C",
+  "slot": "C-4",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t2",
+  "nivel": "n4",
+  "enunt": "Tundra se caracterizează prin vegetație ierboasă.",
+  "origine": "test",
+  "explicatie_geo": "Fals. Tundra are vegetație scundă de mușchi, licheni și arbuști pitici. Vegetația ierboasă este specifică stepei.",
+  "sursa": "Vegetația de tundră: mușchi, licheni și arbuști pitici.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "adevarat": false
+ },
+ {
+  "id": "T1-C-5",
+  "test": 1,
+  "subiect": "C",
+  "slot": "C-5",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t1",
+  "nivel": "n1",
+  "enunt": "Peninsula Malacca o întâlnim în partea de vest a Asiei.",
+  "origine": "test",
+  "explicatie_geo": "Fals. Peninsula Malacca se află în sud-estul Asiei. În vest se află Peninsula Asia Mică.",
+  "sursa": "Sud-est: peninsulele Indochina și Malacca. Peninsula Malacca NU se află în vestul Asiei.",
+  "lectie": "pozitie",
+  "dificultate": 2,
+  "adevarat": false
+ },
+ {
+  "id": "T2-C-5",
+  "test": 2,
+  "subiect": "C",
+  "slot": "C-5",
+  "puncte": 4,
+  "tip": "adevarat_fals",
+  "taram": "t1",
+  "nivel": "n1",
+  "enunt": "Peninsula Asia Mică o întâlnim în partea de vest a Asiei.",
+  "origine": "test",
+  "explicatie_geo": "Adevărat. Asia Mică este în vestul Asiei; aici se află și Capul Baba, punctul extrem vestic.",
+  "sursa": "Vest: Peninsula Asia Mică.",
+  "lectie": "pozitie",
+  "dificultate": 2,
+  "adevarat": true
+ },
+ {
+  "id": "T1-D",
+  "test": 1,
+  "subiect": "D",
+  "slot": "D",
+  "puncte": 20,
+  "tip": "tabel_comparativ",
+  "taram": "t2",
+  "nivel": "n5",
+  "enunt": "Comparați din punct de vedere climatic zona tropical-umedă și zona subpolară (localizare, temperaturi, precipitații, vânturi).",
+  "origine": "test",
+  "explicatie_geo": "Zona tropical-umedă (sudul și sud-estul Asiei) e caldă și primește ploi bogate vara, aduse de musoni. Zona subpolară (nordul Asiei) e rece, cu precipitații reduse, mai ales zăpadă, și vânturi polare.",
+  "sursa": "Fișele „Zona tropical-uscată”, „Zona tropical-umedă”, „Zona subpolară” și „Zona ecuatorială”.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "zone": [
+   "Zona tropical-umedă",
+   "Zona subpolară"
+  ],
+  "criterii": [
+   {
+    "nume": "Localizare",
+    "optiuni": [
+     "în jurul Ecuatorului: Peninsula Malacca și insulele Indoneziei",
+     "în sud-vestul Asiei: Peninsula Arabia, Podișul Iranian, deșertul Thar",
+     "în sudul și sud-estul Asiei: peninsulele Hindustan și Indochina",
+     "în nordul Asiei, de-a lungul țărmului Oceanului Arctic"
+    ],
+    "corecte": [
+     2,
+     3
+    ]
+   },
+   {
+    "nume": "Temperaturi",
+    "optiuni": [
+     "ridicate și constante tot anul (25–28°C), fără anotimpuri",
+     "foarte ridicate vara (peste 40°C ziua), diferențe mari zi–noapte",
+     "ridicate tot anul (peste 20°C), vara caldă și ploioasă",
+     "scăzute: ierni lungi și geroase, veri scurte și răcoroase"
+    ],
+    "corecte": [
+     2,
+     3
+    ]
+   },
+   {
+    "nume": "Precipitații",
+    "optiuni": [
+     "foarte bogate (peste 2 000 mm/an), aproape zilnic",
+     "foarte reduse (sub 200 mm/an)",
+     "bogate, căzute mai ales vara, în sezonul musonic",
+     "reduse (200–300 mm/an), mai ales sub formă de zăpadă"
+    ],
+    "corecte": [
+     2,
+     3
+    ]
+   },
+   {
+    "nume": "Vânturi",
+    "optiuni": [
+     "calm ecuatorial: aerul cald și umed urcă",
+     "alizee uscate, vânturi fierbinți de deșert",
+     "musonii: vara dinspre ocean, iarna dinspre uscat",
+     "vânturi polare, reci, dinspre Oceanul Arctic"
+    ],
+    "corecte": [
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ {
+  "id": "T2-D",
+  "test": 2,
+  "subiect": "D",
+  "slot": "D",
+  "puncte": 20,
+  "tip": "tabel_comparativ",
+  "taram": "t2",
+  "nivel": "n5",
+  "enunt": "Comparați din punct de vedere climatic zona tropical-uscată și zona ecuatorială (localizare, temperaturi, precipitații, vânturi).",
+  "origine": "test",
+  "explicatie_geo": "Ambele zone sunt calde. Zona tropical-uscată (sud-vestul Asiei) are precipitații foarte reduse și vânturi uscate. Zona ecuatorială (în jurul Ecuatorului) are ploi aproape zilnic și calm ecuatorial.",
+  "sursa": "Fișele „Zona tropical-uscată”, „Zona tropical-umedă”, „Zona subpolară” și „Zona ecuatorială”.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "zone": [
+   "Zona tropical-uscată",
+   "Zona ecuatorială"
+  ],
+  "criterii": [
+   {
+    "nume": "Localizare",
+    "optiuni": [
+     "în jurul Ecuatorului: Peninsula Malacca și insulele Indoneziei",
+     "în sud-vestul Asiei: Peninsula Arabia, Podișul Iranian, deșertul Thar",
+     "în sudul și sud-estul Asiei: peninsulele Hindustan și Indochina",
+     "în nordul Asiei, de-a lungul țărmului Oceanului Arctic"
+    ],
+    "corecte": [
+     1,
+     0
+    ]
+   },
+   {
+    "nume": "Temperaturi",
+    "optiuni": [
+     "ridicate și constante tot anul (25–28°C), fără anotimpuri",
+     "foarte ridicate vara (peste 40°C ziua), diferențe mari zi–noapte",
+     "ridicate tot anul (peste 20°C), vara caldă și ploioasă",
+     "scăzute: ierni lungi și geroase, veri scurte și răcoroase"
+    ],
+    "corecte": [
+     1,
+     0
+    ]
+   },
+   {
+    "nume": "Precipitații",
+    "optiuni": [
+     "foarte bogate (peste 2 000 mm/an), aproape zilnic",
+     "foarte reduse (sub 200 mm/an)",
+     "bogate, căzute mai ales vara, în sezonul musonic",
+     "reduse (200–300 mm/an), mai ales sub formă de zăpadă"
+    ],
+    "corecte": [
+     1,
+     0
+    ]
+   },
+   {
+    "nume": "Vânturi",
+    "optiuni": [
+     "calm ecuatorial: aerul cald și umed urcă",
+     "alizee uscate, vânturi fierbinți de deșert",
+     "musonii: vara dinspre ocean, iarna dinspre uscat",
+     "vânturi polare, reci, dinspre Oceanul Arctic"
+    ],
+    "corecte": [
+     1,
+     0
+    ]
+   }
+  ]
+ },
+ {
+  "id": "T1-E",
+  "test": 1,
+  "subiect": "E",
+  "slot": "E",
+  "puncte": 10,
+  "tip": "selectie_multipla",
+  "taram": "t2",
+  "nivel": "n5",
+  "enunt": "Explicați de ce în zona ecuatorială vegetația este abundentă.",
+  "origine": "test",
+  "explicatie_geo": "În zona ecuatorială este cald și umed tot anul. Plantele au căldură, apă și lumină în fiecare lună, așa că pădurea crește continuu: deasă, etajată și mereu verde.",
+  "sursa": "Vegetația este abundentă pentru că este cald și umed tot anul, iar plantele cresc continuu.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "de_selectat": 2,
+  "corecte": [
+   "temperaturile sunt ridicate tot anul",
+   "precipitațiile sunt foarte bogate, aproape zilnic",
+   "nu există un anotimp rece, iar plantele cresc tot anul"
+  ],
+  "gresite": [
+   "verile sunt scurte și răcoroase",
+   "solul este înghețat în adâncime",
+   "bat vânturi uscate și fierbinți",
+   "precipitațiile sunt sub 200 mm pe an"
+  ]
+ },
+ {
+  "id": "T2-E",
+  "test": 2,
+  "subiect": "E",
+  "slot": "E",
+  "puncte": 10,
+  "tip": "selectie_multipla",
+  "taram": "t2",
+  "nivel": "n5",
+  "enunt": "Explicați de ce în zona subpolară vegetația este scundă.",
+  "origine": "test",
+  "explicatie_geo": "În zona subpolară vara este scurtă și rece, iar solul rămâne înghețat în adâncime. Rădăcinile nu pot pătrunde adânc, iar vântul rece usucă plantele. Rezistă doar mușchii, lichenii și arbuștii pitici.",
+  "sursa": "Vegetația e scundă pentru că vara este scurtă și rece, solul este înghețat în adâncime (permafrost) și bat vânturi puternice și reci.",
+  "lectie": "clima",
+  "dificultate": 2,
+  "de_selectat": 2,
+  "corecte": [
+   "temperaturile sunt scăzute, iar vara este scurtă și răcoroasă",
+   "solul rămâne înghețat în adâncime (permafrost)",
+   "bat vânturi puternice și reci"
+  ],
+  "gresite": [
+   "temperaturile sunt ridicate tot anul",
+   "precipitațiile sunt foarte bogate, aproape zilnic",
+   "solurile sunt groase și fertile",
+   "plantele cresc tot anul"
+  ]
+ }
+]

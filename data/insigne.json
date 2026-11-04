@@ -1,0 +1,86 @@
+[
+ {
+  "id": "primul-pas",
+  "nume": "Primul pas",
+  "icon": "👣",
+  "descriere": "Primul nivel terminat."
+ },
+ {
+  "id": "trei-stele",
+  "nume": "Trei stele",
+  "icon": "⭐",
+  "descriere": "Un nivel terminat cu 3 stele."
+ },
+ {
+  "id": "toate-nivelurile",
+  "nume": "Toate nivelurile",
+  "icon": "🧭",
+  "descriere": "Cel puțin o stea în fiecare nivel."
+ },
+ {
+  "id": "navigatorul",
+  "nume": "Navigatorul",
+  "icon": "⛵",
+  "descriere": "6 răspunsuri corecte despre vecini, puncte extreme și țărmuri."
+ },
+ {
+  "id": "acoperisul-lumii",
+  "nume": "Acoperișul lumii",
+  "icon": "🏔️",
+  "descriere": "4 răspunsuri corecte despre relief."
+ },
+ {
+  "id": "stapanul-apelor",
+  "nume": "Stăpânul apelor",
+  "icon": "🌊",
+  "descriere": "5 răspunsuri corecte despre râuri și lacuri."
+ },
+ {
+  "id": "climatologul",
+  "nume": "Climatologul",
+  "icon": "🌦️",
+  "descriere": "6 răspunsuri corecte despre climă, vegetație și animale."
+ },
+ {
+  "id": "ochi-de-cartograf",
+  "nume": "Ochi de cartograf",
+  "icon": "🗺️",
+  "descriere": "2 hărți rezolvate perfect, una după alta."
+ },
+ {
+  "id": "comparatorul",
+  "nume": "Comparatorul",
+  "icon": "⚖️",
+  "descriere": "O comparație climatică rezolvată perfect."
+ },
+ {
+  "id": "explicatorul",
+  "nume": "De ce? Pentru că…",
+  "icon": "💡",
+  "descriere": "O explicație rezolvată perfect."
+ },
+ {
+  "id": "seria-de-foc",
+  "nume": "Seria de foc",
+  "icon": "🔥",
+  "descriere": "Ai învățat 5 zile la rând."
+ },
+ {
+  "id": "expeditia",
+  "nume": "Expediția în Asia",
+  "icon": "🏅",
+  "descriere": "Marea Expediție terminată cu nota cel puțin 9."
+ },
+ {
+  "id": "expeditia-perfecta",
+  "nume": "Nota 10",
+  "icon": "🏆",
+  "descriere": "Marea Expediție terminată cu nota 10."
+ },
+ {
+  "id": "memorie-de-bufnita",
+  "nume": "Memorie de bufniță",
+  "icon": "🦉",
+  "descriere": "10 flashcard-uri ajunse în cutia 5."
+ }
+]

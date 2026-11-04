@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Teste automate – Expediția Asia</title>
+<style>body{font:15px/1.5 system-ui;margin:16px;background:#fff;color:#111}.ok{color:#1d6b2c}.nu{color:#b3261e;font-weight:700}pre{white-space:pre-wrap}</style></head>
+<body><h1>Teste automate</h1><p>Integritatea datelor, baremul testului amestecat și verificarea fiecărui item.</p><pre id="out">Se rulează…</pre>
+<script type="module">
+import * as E from '../js/engine.js';
+import { creeaza } from '../js/exercises.js';
+import { construiesteTest } from '../js/expeditie.js';
+const rez = []; const t = (nume, ok, info = '') => rez.push({ nume, ok: !!ok, info });
+const SLOTURI = ['A-a', 'A-b', 'B-1', 'B-2', 'B-3', 'B-4', 'B-5', 'C-1', 'C-2', 'C-3', 'C-4', 'C-5', 'D', 'E'];
+try {
+  await E.incarcaDate();
+  const toate = E.toateIntrebarile();
+  // 1. integritate
+  const ID = [1, 2].flatMap(n => SLOTURI.map(s => `T${n}-${s}`));
+  t('28 de itemi: toate cele 14 poziții din Testul nr. 1 și din Testul nr. 2', ID.every(id => E.D.teste.some(q => q.id === id)) && E.D.teste.length === 28, `${E.D.teste.length} itemi`);
+  t('fără id-uri duplicate', new Set(toate.map(q => q.id)).size === toate.length);
+  t('fără întrebări suplimentare: doar itemii din teste', E.D.extra.length === 0 && toate.every(q => q.origine === 'test'));
+  t('indicii „corect” valide la grile', toate.filter(q => q.tip === 'grila').every(q => q.corect >= 0 && q.corect < q.variante.length));
+  t('hărți: fiecare marcaj cerut există pe harta testului și răspunsul e în listă', toate.filter(q => q.tip === 'harta_test').every(q => q.itemi.every(it => E.D.harta.harti[q.harta].marcaje[it.eticheta] && q.optiuni.includes(it.corect))));
+  const niv = E.D.taramuri.flatMap(x => x.niveluri.map(n => n.id));
+  t('fiecare item aparține unui nivel existent', toate.every(q => niv.includes(q.nivel)));
+  t('AMESTECARE: fiecare nivel conține itemi din AMBELE teste', niv.every(n => new Set(E.intrebariNivel(n).map(q => q.test)).size === 2), niv.map(n => n + ':' + [...new Set(E.intrebariNivel(n).map(q => q.test))].join('+')).join(' '));
+  t('fiecare tărâm conține itemi din ambele teste', E.D.taramuri.every(x => new Set(E.intrebariTaram(x.id).map(q => q.test)).size === 2));
+  // 2. rezolvarea corectă = punctaj maxim
+  const rele = [];
+  for (const q of toate) { const c = creeaza(q, {}); const v = c.evalueaza(c._rezolva()); if (Math.abs(v - 1) > 1e-9) rele.push(q.id + '=' + v); }
+  t('rezolvarea corectă primește punctaj maxim la toți cei ' + toate.length + ' itemi', !rele.length, rele.join(', '));
+  // 3. răspunsuri greșite = 0
+  const gresit = (q, c) => {
+    switch (q.tip) {
+      case 'grila': return (q.corect + 1) % q.variante.length;
+      case 'adevarat_fals': return !q.adevarat;
+      case 'harta_test': return q.itemi.map(it => q.optiuni.find(o => o !== it.corect));
+      case 'tabel_comparativ': return Object.fromEntries(q.criterii.flatMap((cr, ci) => cr.corecte.map((i, z) => [`${ci}-${z}`, (i + 1) % cr.optiuni.length === cr.corecte[1 - z] ? (i + 2) % cr.optiuni.length : (i + 1) % cr.optiuni.length])));
+      case 'selectie_multipla': { const k = q.de_selectat; const s = []; for (let i = 0; s.length < k; i++) if (c.evalueaza([i]) === 0) s.push(i); return s; }
+    }
+  };
+  const nuZero = toate.filter(q => { const c = creeaza(q, {}); return c.evalueaza(gresit(q, c)) !== 0; }).map(q => q.id);
+  t('răspunsurile greșite primesc 0 puncte la toți itemii', !nuZero.length, nuZero.join(', '));
+  t('A/F: afirmațiile din barem (T1: A F F A F · T2: F A A F A)', [1, 2].map(n => SLOTURI.filter(s => s.startsWith('C')).map(s => E.D.teste.find(q => q.id === `T${n}-${s}`).adevarat ? 'A' : 'F').join('')).join('|') === 'AFFAF|FAAFA');
+  // 4. testul amestecat
+  const pePS = (it) => { const o = {}; for (const q of it) o[q.subiect] = (o[q.subiect] || 0) + q.puncte; return o; };
+  let okBarem = true, okStruct = true, okMix = false, combinatii = new Set();
+  for (let k = 0; k < 300; k++) {
+    const it = construiesteTest();
+    combinatii.add(it.map(q => q.test).join(''));
+    if (it.length !== 14 || it.map(q => q.slot).join() !== SLOTURI.join()) okStruct = false;
+    const max = it.reduce((a, q) => a + q.puncte, 0);
+    const perfect = it.reduce((a, q) => { const c = creeaza(q, {}); return a + q.puncte * c.evalueaza(c._rezolva()); }, 0) + 10;
+    if (max !== 90 || Math.abs(perfect - 100) > 1e-9 || JSON.stringify(pePS(it)) !== JSON.stringify({ A: 20, B: 20, C: 20, D: 20, E: 10 })) okBarem = false;
+    if (new Set(it.map(q => q.test)).size === 2) okMix = true;
+  }
+  t('testul amestecat are mereu cele 14 poziții, în ordinea A–E', okStruct);
+  t('testul amestecat: 90p + 10p oficiu = 100, pe subiecte A20 B20 C20 D20 E10', okBarem);
+  t('testul amestecat combină itemi din ambele teste (variante diferite la fiecare expediție)', okMix && combinatii.size > 100, `${combinatii.size} combinații diferite în 300 de generări`);
+  const doar1 = construiesteTest((s, v) => v.find(q => q.test === 1)), doar2 = construiesteTest((s, v) => v.find(q => q.test === 2));
+  t('alegerea „tot din Testul nr. 1” reface exact Testul nr. 1 (la fel pentru nr. 2)', doar1.every(q => q.test === 1) && doar2.every(q => q.test === 2) && doar1.length === 14);
+  const toateGresite = doar1.reduce((a, q) => { const c = creeaza(q, {}); return a + q.puncte * c.evalueaza(gresit(q, c)); }, 0) + 10;
+  t('toate greșite = 10p (nota 1)', toateGresite === 10, String(toateGresite));
+  // 5. flashcard-uri
+  const cd = E.carduri();
+  t('flashcard-uri: 10 grile + 10 A/F + 10 marcaje de hartă = 30', cd.length === 30, String(cd.length));
+} catch (e) { t('excepție', false, e.stack || e.message); }
+window.__rezultat = rez;
+document.getElementById('out').innerHTML = rez.map(r => `<span class="${r.ok ? 'ok' : 'nu'}">${r.ok ? '✓' : '✗'} ${r.nume}</span>${r.info ? ' — ' + r.info : ''}`).join('\n') + `\n\n${rez.filter(r => r.ok).length} / ${rez.length} teste trecute`;
+</script></body></html>
