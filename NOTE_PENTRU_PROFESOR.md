@@ -23,7 +23,7 @@ Totalul este 90p, plus 10p din oficiu. Pentru alt barem, schimbați câmpul `pun
 | T1 | 1 | Enisei (râul care trece prin Cercul Polar și primește Angara din Baikal) |
 | T1 | 2 | Indus |
 | T1 | 3 | Lacul Aral (la est de Marea Caspică) |
-| T1 | A | Peninsula Hindustan |
+| T1 | A | Peninsula India |
 | T1 | B | Insula Borneo (Kalimantan) |
 | T2 | 1 | Huang He (marea buclă din nordul Chinei) |
 | T2 | 2 | Lena (cu delta la Marea Laptev) |

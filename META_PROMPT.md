@@ -27,7 +27,7 @@ Fiecare test are propria hartă a Asiei, cu marcajele tipărite (cifre și liter
 | Item | Testul nr. 1 | Testul nr. 2 |
 |---|---|---|
 | A.a – elementele hidrografice 1, 2, 3 (3 × 4p) | 1 = Enisei · 2 = Indus · 3 = Lacul Aral | 1 = Huang He · 2 = Lena · 3 = Lacul Balhaș |
-| A.b – două elemente de țărm (2 × 4p) | peninsula A = Peninsula Hindustan · insula B = Insula Borneo (Kalimantan) | golful A = Golful Bengal · arhipelagul B = Arhipelagul Japonez |
+| A.b – două elemente de țărm (2 × 4p) | peninsula A = Peninsula India · insula B = Insula Borneo (Kalimantan) | golful A = Golful Bengal · arhipelagul B = Arhipelagul Japonez |
 
 ### Subiectul B – alegerea răspunsului corect (5 × 4p)
 | Nr. | Testul nr. 1 | Testul nr. 2 |
@@ -55,7 +55,7 @@ Se compară după 4 criterii: localizare, temperaturi, precipitații, vânturi (
 
 | Criteriu | Ecuatorială | Tropical-uscată | Tropical-umedă | Subpolară |
 |---|---|---|---|---|
-| Localizare | în jurul Ecuatorului: Pen. Malacca, insulele Indoneziei | sud-vestul Asiei: Pen. Arabia, Pod. Iranian, deșertul Thar | sudul și sud-estul Asiei: Hindustan, Indochina | nordul Asiei, țărmul Oceanului Arctic |
+| Localizare | în jurul Ecuatorului: Pen. Malacca, insulele Indoneziei | sud-vestul Asiei: Pen. Arabia, Pod. Iranian, deșertul Thar | sudul și sud-estul Asiei: Pen. India, Indochina | nordul Asiei, țărmul Oceanului Arctic |
 | Temperaturi | ridicate și constante (25–28°C), fără anotimpuri | foarte ridicate vara (peste 40°C), diferențe mari zi–noapte | ridicate tot anul (peste 20°C) | ierni lungi și geroase, veri scurte și răcoroase |
 | Precipitații | foarte bogate (peste 2 000 mm), aproape zilnic | foarte reduse (sub 200 mm) | bogate, vara, în sezonul musonic | reduse (200–300 mm), mai ales zăpadă |
 | Vânturi | calm ecuatorial, aer ascendent | alizee uscate, vânturi fierbinți | musonii (vara dinspre ocean, iarna dinspre uscat) | vânturi polare, reci |

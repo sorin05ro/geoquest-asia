@@ -33,13 +33,13 @@ L = {
   ("Peninsule", [
    "Vest: Peninsula Asia Mică.",
    "Sud-vest: Peninsula Arabia, cea mai mare peninsulă de pe Glob.",
-   "Sud: Peninsula Hindustan (India).",
+   "Sud: Peninsula India.",
    "Sud-est: peninsulele Indochina și Malacca. Peninsula Malacca NU se află în vestul Asiei.",
    "Est: peninsulele Coreea, Kamciatka și Ciukotka. Nord: Peninsula Taimîr."]),
   ("Insule, arhipelaguri și golfuri", [
    "Insula Borneo (Kalimantan) este cea mai mare insulă a Asiei. Alte insule: Sumatera, Java, Sri Lanka.",
    "Arhipelaguri: Arhipelagul Japonez (în est, în Oceanul Pacific), Arhipelagul Filipine, Arhipelagul Indoneziei.",
-   "Golful Bengal, între Peninsula Hindustan și Peninsula Indochina, este cel mai mare golf de pe Glob.",
+   "Golful Bengal, între Peninsula India și Peninsula Indochina, este cel mai mare golf de pe Glob.",
    "Alte golfuri și mări: Golful Persic, Marea Arabiei, Marea Chinei de Sud, Marea Japoniei."]),
  ],
  "relief": [
@@ -51,7 +51,7 @@ L = {
    "Podișul Tibet este cel mai înalt și cel mai întins podiș înalt de pe Glob (4 000–5 000 m).",
    "Pamirul este numit „Acoperișul lumii”: un nod de munți și podișuri înalte, de peste 4 000 m.",
    "Dintre variantele Dekan, Pamir, Iranian și Arabiei, cel mai înalt este Pamirul. Dintre Dekan, Tibet, Iranian și Arabiei, cel mai înalt este Tibetul.",
-   "Alte podișuri: Podișul Iranian, Podișul Arabiei, Podișul Dekan (în Peninsula Hindustan), Podișul Siberiei Centrale."]),
+   "Alte podișuri: Podișul Iranian, Podișul Arabiei, Podișul Dekan (în Peninsula India), Podișul Siberiei Centrale."]),
   ("Câmpiile și depresiunile", [
    "Câmpia Siberiei de Vest, străbătută de râul Obi.",
    "Câmpia Indo-Gangetică, străbătută de râurile Indus și Gange (și Brahmaputra).",
@@ -102,7 +102,7 @@ L = {
    "Precipitații foarte reduse (sub 200 mm/an). Vânturi: alizee uscate și vânturi fierbinți de deșert (samum).",
    "Vegetație rară, adaptată secetei. Animal tipic: cămila."]),
   ("Zona tropical-umedă – climatul musonic", [
-   "Localizare: în sudul și sud-estul Asiei – peninsulele Hindustan și Indochina, sud-estul Chinei.",
+   "Localizare: în sudul și sud-estul Asiei – peninsulele India și Indochina, sud-estul Chinei.",
    "Temperaturi ridicate tot anul (peste 20°C).",
    "Precipitații bogate, căzute mai ales vara, în sezonul musonic. La Cherrapunji (India) se înregistrează cele mai mari cantități.",
    "Vânturi: musonii. Vara bat dinspre ocean (umed), iarna dinspre uscat (uscat).",
@@ -149,22 +149,22 @@ def item(test, slot, nivel, tip, puncte, enunt, lectie, expl, sursa, **kw):
 
 # ---------- Subiectul A – harta (a = 3 × 4p, b = 2 × 4p)
 HIDRO = ["Enisei", "Indus", "Lacul Aral", "Huang He", "Lena", "Lacul Balhaș", "Obi", "Gange", "Amur", "Lacul Baikal", "Yangtze", "Marea Caspică"]
-TARM = ["Peninsula Hindustan", "Insula Borneo (Kalimantan)", "Golful Bengal", "Arhipelagul Japonez", "Peninsula Arabia", "Peninsula Indochina",
+TARM = ["Peninsula India", "Insula Borneo (Kalimantan)", "Golful Bengal", "Arhipelagul Japonez", "Peninsula Arabia", "Peninsula Indochina",
         "Peninsula Malacca", "Insula Sri Lanka", "Golful Persic", "Arhipelagul Filipine"]
 item(1, "A-a", "n3", "harta_test", 12, "Analizând harta, precizați elementele hidrografice notate cu cifrele 1, 2, 3.", "ape",
      "1 – Enisei curge spre nord, în Oceanul Arctic, și primește apele lacului Baikal prin Angara; 2 – Indus coboară din Tibet spre Marea Arabiei; 3 – Lacul Aral se află la est de Marea Caspică.",
      "Obi, Enisei și Lena se varsă în Oceanul Arctic. Indus se varsă în Marea Arabiei. Lacul Aral se află la est de Marea Caspică.",
      harta="t1", optiuni=HIDRO, itemi=[{"eticheta": "1", "corect": "Enisei"}, {"eticheta": "2", "corect": "Indus"}, {"eticheta": "3", "corect": "Lacul Aral"}])
 item(1, "A-b", "n3", "harta_test", 8, "Analizând harta, precizați peninsula și insula notate cu literele A și B.", "pozitie",
-     "A – Peninsula Hindustan, în sudul Asiei, între Marea Arabiei și Golful Bengal; B – Insula Borneo (Kalimantan), cea mai mare insulă a Asiei, pe Ecuator.",
-     "Peninsula Hindustan se află în sudul Asiei. Insula Borneo (Kalimantan) este cea mai mare insulă a Asiei.",
-     harta="t1", optiuni=TARM, itemi=[{"eticheta": "A", "corect": "Peninsula Hindustan"}, {"eticheta": "B", "corect": "Insula Borneo (Kalimantan)"}])
+     "A – Peninsula India, în sudul Asiei, între Marea Arabiei și Golful Bengal; B – Insula Borneo (Kalimantan), cea mai mare insulă a Asiei, pe Ecuator.",
+     "Peninsula India se află în sudul Asiei. Insula Borneo (Kalimantan) este cea mai mare insulă a Asiei.",
+     harta="t1", optiuni=TARM, itemi=[{"eticheta": "A", "corect": "Peninsula India"}, {"eticheta": "B", "corect": "Insula Borneo (Kalimantan)"}])
 item(2, "A-a", "n3", "harta_test", 12, "Analizând harta, precizați elementele hidrografice notate cu cifrele 1, 2, 3.", "ape",
      "1 – Huang He (Fluviul Galben), cu marea sa buclă din nordul Chinei; 2 – Lena, care se varsă printr-o deltă în Oceanul Arctic; 3 – Lacul Balhaș, lac alungit la est de Aral.",
      "Huang He se varsă în Oceanul Pacific. Lena se varsă în Oceanul Arctic. Lacul Balhaș este un lac alungit, la est de Aral.",
      harta="t2", optiuni=HIDRO, itemi=[{"eticheta": "1", "corect": "Huang He"}, {"eticheta": "2", "corect": "Lena"}, {"eticheta": "3", "corect": "Lacul Balhaș"}])
 item(2, "A-b", "n3", "harta_test", 8, "Analizând harta, precizați golful și arhipelagul notate cu literele A și B.", "pozitie",
-     "A – Golful Bengal, cel mai mare golf de pe Glob, la est de Peninsula Hindustan; B – Arhipelagul Japonez, în estul Asiei, în Oceanul Pacific.",
+     "A – Golful Bengal, cel mai mare golf de pe Glob, la est de Peninsula India; B – Arhipelagul Japonez, în estul Asiei, în Oceanul Pacific.",
      "Golful Bengal este cel mai mare golf de pe Glob. Arhipelagul Japonez se află în Oceanul Pacific.",
      harta="t2", optiuni=TARM, itemi=[{"eticheta": "A", "corect": "Golful Bengal"}, {"eticheta": "B", "corect": "Arhipelagul Japonez"}])
 
@@ -227,7 +227,7 @@ CRITERII = [
  ("Localizare", {
    "ecuatoriala": "în jurul Ecuatorului: Peninsula Malacca și insulele Indoneziei",
    "tropical_uscata": "în sud-vestul Asiei: Peninsula Arabia, Podișul Iranian, deșertul Thar",
-   "tropical_umeda": "în sudul și sud-estul Asiei: peninsulele Hindustan și Indochina",
+   "tropical_umeda": "în sudul și sud-estul Asiei: peninsulele India și Indochina",
    "subpolara": "în nordul Asiei, de-a lungul țărmului Oceanului Arctic"}),
  ("Temperaturi", {
    "ecuatoriala": "ridicate și constante tot anul (25–28°C), fără anotimpuri",

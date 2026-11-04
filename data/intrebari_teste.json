@@ -55,13 +55,13 @@
   "nivel": "n3",
   "enunt": "Analizând harta, precizați peninsula și insula notate cu literele A și B.",
   "origine": "test",
-  "explicatie_geo": "A – Peninsula Hindustan, în sudul Asiei, între Marea Arabiei și Golful Bengal; B – Insula Borneo (Kalimantan), cea mai mare insulă a Asiei, pe Ecuator.",
-  "sursa": "Peninsula Hindustan se află în sudul Asiei. Insula Borneo (Kalimantan) este cea mai mare insulă a Asiei.",
+  "explicatie_geo": "A – Peninsula India, în sudul Asiei, între Marea Arabiei și Golful Bengal; B – Insula Borneo (Kalimantan), cea mai mare insulă a Asiei, pe Ecuator.",
+  "sursa": "Peninsula India se află în sudul Asiei. Insula Borneo (Kalimantan) este cea mai mare insulă a Asiei.",
   "lectie": "pozitie",
   "dificultate": 2,
   "harta": "t1",
   "optiuni": [
-   "Peninsula Hindustan",
+   "Peninsula India",
    "Insula Borneo (Kalimantan)",
    "Golful Bengal",
    "Arhipelagul Japonez",
@@ -75,7 +75,7 @@
   "itemi": [
    {
     "eticheta": "A",
-    "corect": "Peninsula Hindustan"
+    "corect": "Peninsula India"
    },
    {
     "eticheta": "B",
@@ -139,13 +139,13 @@
   "nivel": "n3",
   "enunt": "Analizând harta, precizați golful și arhipelagul notate cu literele A și B.",
   "origine": "test",
-  "explicatie_geo": "A – Golful Bengal, cel mai mare golf de pe Glob, la est de Peninsula Hindustan; B – Arhipelagul Japonez, în estul Asiei, în Oceanul Pacific.",
+  "explicatie_geo": "A – Golful Bengal, cel mai mare golf de pe Glob, la est de Peninsula India; B – Arhipelagul Japonez, în estul Asiei, în Oceanul Pacific.",
   "sursa": "Golful Bengal este cel mai mare golf de pe Glob. Arhipelagul Japonez se află în Oceanul Pacific.",
   "lectie": "pozitie",
   "dificultate": 2,
   "harta": "t2",
   "optiuni": [
-   "Peninsula Hindustan",
+   "Peninsula India",
    "Insula Borneo (Kalimantan)",
    "Golful Bengal",
    "Arhipelagul Japonez",
@@ -592,7 +592,7 @@
     "optiuni": [
      "în jurul Ecuatorului: Peninsula Malacca și insulele Indoneziei",
      "în sud-vestul Asiei: Peninsula Arabia, Podișul Iranian, deșertul Thar",
-     "în sudul și sud-estul Asiei: peninsulele Hindustan și Indochina",
+     "în sudul și sud-estul Asiei: peninsulele India și Indochina",
      "în nordul Asiei, de-a lungul țărmului Oceanului Arctic"
     ],
     "corecte": [
@@ -666,7 +666,7 @@
     "optiuni": [
      "în jurul Ecuatorului: Peninsula Malacca și insulele Indoneziei",
      "în sud-vestul Asiei: Peninsula Arabia, Podișul Iranian, deșertul Thar",
-     "în sudul și sud-estul Asiei: peninsulele Hindustan și Indochina",
+     "în sudul și sud-estul Asiei: peninsulele India și Indochina",
      "în nordul Asiei, de-a lungul țărmului Oceanului Arctic"
     ],
     "corecte": [
