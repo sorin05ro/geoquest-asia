@@ -50,14 +50,3 @@ Descrierile sunt în fișa *Climă, vegetație și faună*.
 
 - Progresul rămâne pe dispozitivul elevului. Elevul poate exporta un fișier de progres, pe care îl importați din Modul Profesor.
 - Sincronizarea între dispozitive (Supabase, server în UE) este prevăzută pentru etapa a doua a GeoQuest.
-
-## 6. Atlasul Asiei – de verificat
-
-1. **Calibrarea.** Toate cele 174 de elemente au coordonate aproximative (`verificat: false`). În *Modul Profesor → Calibrare Atlas*:
-   - verificați zona de răspuns și măștile peste denumiri;
-   - bifați „Verificat”;
-   - la final, exportați `atlas.json` și înlocuiți `data/atlas.json`.
-   Până atunci, jocul folosește toate elementele.
-2. **Extremitatea sudică insulară.** Pinul S de pe harta poziției arată sudul Arhipelagului Indonezian. Elementul se numește provizoriu „Extremitatea sudică insulară (Arhipelagul Indonezian)”. Confirmați denumirea din manual.
-3. **Distanțele N–S și V–E („??? km”)** nu sunt încă în joc. Spuneți-mi valorile din manual și adaug exercițiul cu rigla. Scara grafică a hărții nu este valabilă pe toată suprafața, deci și mesajele la greșeală nu folosesc kilometri.
-4. **Drepturile asupra hărților.** Hărțile provin din manualul Art Klett. Depozitul este public. Hărțile se publică pe GitHub Pages doar cu acordul dumneavoastră.

@@ -2,15 +2,12 @@
 import { incarca, salveaza } from './storage.js';
 import { amesteca } from './ui.js';
 
-export const D = { atlas: null, lectii: null, taramuri: [], structura: [], teste: [], extra: [], harta: null, insigne: [] };
+export const D = { lectii: null, taramuri: [], structura: [], teste: [], extra: [], harta: null, insigne: [] };
 
 export async function incarcaDate() {
   const f = (p) => fetch(new URL('../' + p, import.meta.url)).then(r => { if (!r.ok) throw new Error(p); return r.json(); });
-  const [lectii, teste, extra, harta, insigne, atlas] = await Promise.all([
-    f('data/lectii.json'), f('data/intrebari_teste.json'), f('data/intrebari_extra.json'), f('data/harta.json'), f('data/insigne.json'), f('data/atlas.json')]);
-  D.atlas = atlas;
-  // insignele Atlasului se adaugă la lista comună (profil, acordare)
-  for (const i of atlas.insigne) if (!insigne.some(x => x.id === i.id)) insigne.push({ id: i.id, nume: i.nume, icon: i.icon, descriere: i.descriere });
+  const [lectii, teste, extra, harta, insigne] = await Promise.all([
+    f('data/lectii.json'), f('data/intrebari_teste.json'), f('data/intrebari_extra.json'), f('data/harta.json'), f('data/insigne.json')]);
   D.lectii = lectii.lectii; D.lectiiIndex = lectii.lectii_index || []; D.taramuri = lectii.taramuri; D.structura = lectii.structura_test || []; D.teste = teste; D.extra = extra; D.harta = harta; D.insigne = insigne;
   for (const q of [...teste, ...extra]) q.etichete = etichete(q);
 }
@@ -125,15 +122,6 @@ export function carduri() {
       continue;
     }
     if (fata) out.push({ id: q.id, taram: q.taram, fata, verso, sursa: q.sursa });
-  }
-  // Atlasul: doar elementele întâlnite (greșite cel puțin o dată) intră în cutiile Leitner
-  if (D.atlas) {
-    const s = incarca(); const dz = new Set(s.dezactivate); const cal = s.atlas?.calibrare || {};
-    for (const e of D.atlas.elemente) {
-      const id = 'atlas:' + e.id;
-      if (!s.leitner[id] || dz.has(id)) continue;
-      out.push({ id, taram: 'atlas', atlas: cal[e.id] ? { ...e, ...cal[e.id] } : e, fata: 'Ce element este evidențiat pe hartă?', verso: e.nume, sursa: e.sursa });
-    }
   }
   return out;
 }

@@ -1,10 +1,10 @@
 // Service worker: aplicația merge offline după prima încărcare.
-const VERSIUNE = 'gqa-v1.1.0';
+const VERSIUNE = 'gqa-v1.0.3';
 const NUCLEU = [
   './', 'index.html', 'manifest.json', 'css/style.css',
-  'js/app.js', 'js/engine.js', 'js/exercises.js', 'js/harta.js', 'js/expeditie.js', 'js/clasa.js', 'js/profesor.js', 'js/storage.js', 'js/normalize.js', 'js/ui.js', 'js/atlas.js', 'js/atlas-geo.js', 'js/harta-interactiva.js', 'js/atlas-calibrare.js',
-  'data/lectii.json', 'data/intrebari_teste.json', 'data/intrebari_extra.json', 'data/harta.json', 'data/insigne.json', 'data/atlas.json',
-  'assets/harta-t1.webp', 'assets/harta-t1.png', 'assets/harta-t2.webp', 'assets/harta-t2.png', 'assets/atlas/asia_hidrografie.webp', 'assets/atlas/asia_pozitie.webp', 'assets/atlas/asia_relief.webp', 'assets/atlas/asia_hidrografie.jpg', 'assets/atlas/asia_pozitie.jpg', 'assets/atlas/asia_relief.jpg', 'assets/icon.svg', 'assets/icon-192.png', 'assets/icon-512.png'
+  'js/app.js', 'js/engine.js', 'js/exercises.js', 'js/harta.js', 'js/expeditie.js', 'js/clasa.js', 'js/profesor.js', 'js/storage.js', 'js/normalize.js', 'js/ui.js',
+  'data/lectii.json', 'data/intrebari_teste.json', 'data/intrebari_extra.json', 'data/harta.json', 'data/insigne.json',
+  'assets/harta-t1.webp', 'assets/harta-t1.png', 'assets/harta-t2.webp', 'assets/harta-t2.png', 'assets/icon.svg', 'assets/icon-192.png', 'assets/icon-512.png'
 ];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(VERSIUNE).then(c => c.addAll(NUCLEU)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => {
