@@ -29,6 +29,32 @@ Aplicația este un modul al proiectului GeoQuest. Mascota este **Geo, bufnița-c
   - hărțile testelor, cu răspunsurile.
 - **Funcționează offline** după prima deschidere și se poate instala pe telefon. Nu are conturi, cookie-uri sau reclame; elevul folosește doar o poreclă.
 
+## Atlasul Asiei (localizare pe hartă)
+
+Secțiunea **Atlasul Asiei** (`#/atlas`) folosește cele trei hărți din manual: hidrografia, poziția geografică și țărmurile, relieful. Denumirile tipărite pe hărți sunt **acoperite cu măști** în timpul jocului.
+
+- **174 de elemente** în 3 regiuni-hartă și **20 de niveluri**, plus **Marele Atlas** (12 itemi amestecați din toate hărțile).
+- **5 tipuri de exerciții:** Găsește pe hartă, Ce e aici?, Pune etichetele, Spre ce ocean curge?, Ce formă de relief este?
+- **Explorează:** harta fără măști; atingi un loc și afli ce este acolo.
+- **Stele:** 1★ de la 60%, 2★ de la 80%, 3★ de la 95%. XP, ranguri și seria zilnică sunt comune cu restul aplicației.
+- **5 insigne noi:** Hidrograful Siberiei, Cuceritorul Himalayei, Inelul de Foc, Cele patru vânturi, Cartograful.
+- Elementele greșite intră în **flashcard-uri** (Leitner), cu decupajul de hartă.
+- **Harta interactivă:** zoom cu două degete sau cu butoanele, atingere confirmată prin „Verifică”. Elevii care nu pot atinge precis pot alege dintre marcaje numerotate.
+- **Modul Profesor → Calibrare Atlas:**
+  - mutarea zonelor de răspuns și desenarea măștilor;
+  - bifarea elementelor verificate;
+  - activarea sau dezactivarea elementelor;
+  - export și import `atlas.json`.
+
+Coordonatele au fost puse aproximativ, după hărți, și sunt marcate `"verificat": false` până la calibrare.
+
+| Fișier | Conținut |
+|---|---|
+| `tools/genereaza_atlas.py` | Elementele, zonele și măștile (în pixeli), nivelurile și insignele Atlasului. Generează `data/atlas.json` |
+| `data/atlas.json` | Datele Atlasului, cu coordonate fracționare (0–1) |
+| `assets/atlas/` | Cele trei hărți (WebP + JPG) |
+| `js/atlas.js`, `js/harta-interactiva.js`, `js/atlas-geo.js`, `js/atlas-calibrare.js` | Ecranele, harta cu zoom, geometria, editorul de calibrare |
+
 ## Cum se folosește la clasă
 
 1. Pe tablă, deschide **Setări → Mod proiecție**.

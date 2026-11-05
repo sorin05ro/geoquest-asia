@@ -7,6 +7,8 @@ import { ecranExpeditie, ecranAlegereExpeditie } from './expeditie.js';
 import { ecranClasa } from './clasa.js';
 import { ecranProfesor } from './profesor.js';
 import { harta } from './harta.js';
+import { ecranAtlas, ecranRegiune, ecranNivelAtlas, ecranExplora } from './atlas.js';
+import { decupajAtlas } from './harta-interactiva.js';
 
 const app = document.getElementById('app');
 const AVATARURI = ['🦉', '🐯', '🐼', '🐘', '🦌', '🐫', '🦧', '🐻', '🦊', '🐍'];
@@ -27,6 +29,8 @@ export function antet() {
 const RUTE = [
   [/^#\/?$/, acasa], [/^#\/taram\/(\w+)$/, ecranTaram], [/^#\/nivel\/(\w+)$/, ecranNivel], [/^#\/invata\/(\w+)$/, ecranInvata], [/^#\/lectii$/, ecranLectii],
   [/^#\/flash(?:\/(\w+))?$/, ecranFlash], [/^#\/expeditie$/, () => ecranAlegereExpeditie(app)], [/^#\/expeditie\/(\d)$/, () => ecranExpeditie(app)],
+  [/^#\/atlas$/, () => ecranAtlas(app)], [/^#\/atlas\/r\/([\w-]+)$/, (id) => ecranRegiune(app, id)],
+  [/^#\/atlas\/n\/([\w-]+)$/, (id) => ecranNivelAtlas(app, id, { antet, reia: () => ruta() })], [/^#\/atlas\/explora\/(\w+)$/, (id) => ecranExplora(app, id)],
   [/^#\/profil$/, ecranProfil], [/^#\/clasa$/, () => ecranClasa(app)], [/^#\/profesor$/, () => ecranProfesor(app)], [/^#\/setari$/, ecranSetari],
 ];
 function ruta() {
@@ -79,6 +83,10 @@ function acasa() {
       h(boss ? 'a' : 'div', { class: 'taram boss' + (boss ? '' : ' blocat'), href: boss ? '#/expeditie' : null, style: { '--c': '#12355b' } },
         h('span', { class: 'icon' }, boss ? '🏆' : '🔒'), h('span', { class: 'nr' }, `Tărâmul ${E.D.taramuri.length + 1}`), h('strong', {}, 'Marea Expediție'),
         h('span', { class: 'mic' }, boss ? 'Test amestecat din ambele teste, cu notă.' : 'Se deschide când ai 60% din stelele nivelurilor.'))),
+    h('a', { class: 'card-atlas', href: '#/atlas' },
+      h('span', { class: 'icon' }, '🗺️'),
+      h('span', {}, h('strong', {}, 'Atlasul Asiei'), h('small', {}, 'Găsește pe hartă râurile, munții, insulele și mările Asiei – trei hărți, 20 de niveluri.')),
+      h('span', { class: 'sageata', 'aria-hidden': 'true' }, '→')),
     h('h2', { class: 'titlu-sectiune' }, 'Antrenament rapid'),
     h('div', { class: 'actiuni' },
       h('a', { class: 'actiune', href: '#/lectii' }, h('span', {}, '📖'), h('strong', {}, 'Fișe de recapitulare'), h('small', {}, 'Recitește înainte de test')),
@@ -223,7 +231,8 @@ function ecranFlash(taram) {
     if (i >= lista.length) { zona.replaceChildren(geoSpune(`Gata! Ai știut ${stiute} din ${lista.length} carduri. Cardurile știute revin mai rar, cele greșite – mâine.`, 'bucuros'), h('a', { class: 'btn', href: '#/' }, 'Acasă')); antet(); return; }
     const c = lista[i]; let intoarsa = false;
     const card = h('button', { class: 'flashcard', type: 'button', 'aria-label': 'Întoarce cardul', onclick: () => { intoarsa = !intoarsa; card.classList.toggle('intors', intoarsa); btns.hidden = !intoarsa; } },
-      h('div', { class: 'fata' }, h('small', {}, `Cardul ${i + 1} din ${lista.length} · atinge ca să-l întorci`), c.harta ? harta({ id: c.harta, zoom: c.marcaj, clasa: 'card-harta' }) : null, h('p', {}, c.fata)),
+      h('div', { class: 'fata' }, h('small', {}, `Cardul ${i + 1} din ${lista.length} · atinge ca să-l întorci`), c.harta ? harta({ id: c.harta, zoom: c.marcaj, clasa: 'card-harta' }) : null,
+        c.atlas ? decupajAtlas(E.D.atlas.harti[c.atlas.harta], c.atlas, { masti: E.D.atlas.elemente.filter(e => e.harta === c.atlas.harta).flatMap(e => e.masti) }) : null, h('p', {}, c.fata)),
       h('div', { class: 'verso' }, h('p', { class: 'raspuns' }, c.verso), h('small', {}, '📖 ' + (c.sursa || ''))));
     const btns = h('div', { class: 'rand-butoane', hidden: true },
       h('button', { class: 'btn sec', onclick: () => { E.raspunsCard(c.id, false); i++; desen(); } }, '✗ Nu știam'),

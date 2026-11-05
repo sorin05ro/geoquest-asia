@@ -6,6 +6,8 @@
 import * as E from '../js/engine.js';
 import { creeaza } from '../js/exercises.js';
 import { construiesteTest } from '../js/expeditie.js';
+import { valideaza, centru, inZona } from '../js/atlas-geo.js';
+import { construiesteNivel as construiesteNivelAtlas } from '../js/atlas.js';
 const rez = []; const t = (nume, ok, info = '') => rez.push({ nume, ok: !!ok, info });
 const SLOTURI = ['A-a', 'A-b', 'B-1', 'B-2', 'B-3', 'B-4', 'B-5', 'C-1', 'C-2', 'C-3', 'C-4', 'C-5', 'D', 'E'];
 try {
@@ -61,6 +63,18 @@ try {
   // 5. flashcard-uri
   const cd = E.carduri();
   t('flashcard-uri: 10 grile + 10 A/F + 10 marcaje de hartă = 30', cd.length === 30, String(cd.length));
+  // 6. Atlasul Asiei
+  const AT = E.D.atlas;
+  const prob = valideaza(AT);
+  t('Atlas: date valide (geometrie în hartă, centrul fiecărui element în propria zonă, măști în hartă)', prob.length === 0, prob.join('; ') || `${AT.elemente.length} elemente`);
+  t('Atlas: 3 hărți și toate elementele din inventar (≥ 170)', Object.keys(AT.harti).length === 3 && AT.elemente.length >= 170, String(AT.elemente.length));
+  t('Atlas: atingerea centrului e acceptată, atingerea departe e respinsă', AT.elemente.every(e => { const h = AT.harti[e.harta]; const [x, y] = centru(e.geometrie); return inZona(e.geometrie, x, y, h.latime, h.inaltime) && !inZona(e.geometrie, x > .5 ? .02 : .98, y > .5 ? .02 : .98, h.latime, h.inaltime); }));
+  t('Atlas: fiecare râu are bazinul hidrografic', AT.elemente.filter(e => e.categorie === 'rau').every(e => AT.bazine[e.bazin]));
+  const nivAt = AT.regiuni.flatMap(r => r.niveluri.map(n => n.id));
+  const goale = nivAt.filter(n => construiesteNivelAtlas(n).length < 8);
+  t('Atlas: fiecare nivel are 8–12 itemi', goale.length === 0, goale.join(', ') || `${nivAt.length} niveluri`);
+  t('Atlas: niciun element marcat „verificat” fără calibrarea profesorului', AT.elemente.every(e => e.verificat === false));
+  t('Atlas: valorile de pe hartă – Everest 8 850 m, Turfan −154 m', AT.elemente.find(e => e.id === 'v-everest').valoare === 8850 && AT.elemente.find(e => e.id === 'dep-turfan').valoare === -154);
 } catch (e) { t('excepție', false, e.stack || e.message); }
 window.__rezultat = rez;
 document.getElementById('out').innerHTML = rez.map(r => `<span class="${r.ok ? 'ok' : 'nu'}">${r.ok ? '✓' : '✗'} ${r.nume}</span>${r.info ? ' — ' + r.info : ''}`).join('\n') + `\n\n${rez.filter(r => r.ok).length} / ${rez.length} teste trecute`;

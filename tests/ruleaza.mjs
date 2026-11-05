@@ -19,7 +19,7 @@ let esec = 0;
 }
 // capturi la 375 / 768 / 1920 px + verificare scroll orizontal
 const stare = { porecla: 'Test', avatar: '🦊', xp: 420, insigne: ['primul-pas', 'trei-stele', 'ochi-de-cartograf'], stele: { n1: 3, n2: 2, n4: 1 }, seria: { ultimaZi: new Date().toISOString().slice(0, 10), zile: 3 }, bossDeblocat: true, setari: { sunet: false, cronometru: true, textMare: false } };
-const ecrane = [['acasa', '#/'], ['taram', '#/taram/t1'], ['nivel-harta', '#/nivel/n3'], ['nivel-comparare', '#/nivel/n5'], ['lectii', '#/lectii'], ['invata', '#/invata/clima'], ['flash', '#/flash'], ['expeditie', '#/expeditie/1'], ['profil', '#/profil'], ['clasa', '#/clasa']];
+const ecrane = [['acasa', '#/'], ['taram', '#/taram/t1'], ['nivel-harta', '#/nivel/n3'], ['nivel-comparare', '#/nivel/n5'], ['lectii', '#/lectii'], ['invata', '#/invata/clima'], ['flash', '#/flash'], ['expeditie', '#/expeditie/1'], ['profil', '#/profil'], ['clasa', '#/clasa'], ['atlas', '#/atlas'], ['atlas-regiune', '#/atlas/r/relief'], ['atlas-nivel', '#/atlas/n/r3'], ['atlas-explora', '#/atlas/explora/hidrografie']];
 for (const w of [375, 768, 1920]) {
   const ctx = await b.newContext({ viewport: { width: w, height: w === 1920 ? 1080 : w === 768 ? 1024 : 812 } });
   await ctx.addInitScript((s) => { try { localStorage.setItem('geoquest-asia-v1', JSON.stringify(s)); } catch (e) {} }, stare);

@@ -274,3 +274,59 @@ h1, h2, h3 { line-height: 1.2; margin: .3em 0 .5em; }
 .mini.z1[aria-pressed="true"] { background: var(--podis-pal); border-color: var(--podis); font-weight: 700; }
 .sol-comp td, .sol-comp th { text-align: left; vertical-align: top; }
 .tabel-barem.sol-comp { width: 100%; font-size: .92em; }
+
+/* ===================== Atlasul Asiei ===================== */
+.card-atlas { display: flex; align-items: center; gap: 14px; margin: 18px 0 6px; padding: 16px 18px; border-radius: var(--raza); text-decoration: none; color: #fff;
+  background: linear-gradient(120deg, #12355b 0%, #1e6fa8 55%, #4f8f4a 100%); box-shadow: var(--umbra); min-height: var(--tinta); }
+.card-atlas .icon { font-size: 2.2em; } .card-atlas strong { display: block; font-size: 1.15em; } .card-atlas small { color: #e3f0fa; display: block; }
+.card-atlas .sageata { margin-left: auto; font-size: 1.6em; font-weight: 700; }
+.card-atlas:hover { filter: brightness(1.08); }
+.cap-atlas { display: flex; align-items: center; gap: 12px; } .cap-atlas .icon { font-size: 2.4em; } .cap-atlas h1 { margin: 0; }
+
+.hi-cadru { position: relative; margin: 10px auto; }
+.hi { position: relative; width: 100%; overflow: hidden; border-radius: 12px; border: 1px solid var(--linie); background: #d7ecf5; touch-action: none; cursor: crosshair; user-select: none; -webkit-user-select: none; }
+.hi.marita { cursor: grab; }
+.hi-scena { position: absolute; inset: 0; transform-origin: 0 0; will-change: transform; }
+.hi-scena img { display: block; width: 100%; height: 100%; pointer-events: none; }
+.hi-strat { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.hi-controale { position: absolute; right: 8px; top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.hi-btn { width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--linie); background: rgba(255,255,255,.92); color: #12355b; font: inherit; font-size: 1.3em; font-weight: 700; cursor: pointer; box-shadow: var(--umbra); }
+:root[data-proiectie] .hi-btn { width: 60px; height: 60px; }
+.masca { transition: opacity .3s; }
+.zona { fill: rgba(255, 209, 64, .28); stroke: #d48a00; stroke-width: 3; vector-effect: non-scaling-stroke; }
+.zona.linie { fill: none; stroke: rgba(255, 196, 0, .55); stroke-linecap: round; stroke-linejoin: round; vector-effect: none; }
+.zona.intreaba { fill: rgba(255, 196, 0, .25); stroke: #e0a800; stroke-width: 4; animation: puls 1.4s ease-in-out infinite; }
+.zona.intreaba.linie { stroke: rgba(255, 170, 0, .7); fill: none; }
+.zona.corect { fill: rgba(45, 160, 70, .28); stroke: #1d7a33; }
+.zona.corect.linie { fill: none; stroke: rgba(45, 160, 70, .6); }
+.zona.solutie { fill: rgba(30, 111, 168, .25); stroke: #12355b; stroke-dasharray: 6 4; }
+.zona.solutie.linie { fill: none; stroke: rgba(30, 111, 168, .6); stroke-dasharray: none; }
+.zona.editare { fill: rgba(210, 31, 60, .18); stroke: #d21f3c; stroke-width: 2; }
+.zona.editare.linie { fill: none; stroke: rgba(210, 31, 60, .45); }
+.masca-edit { stroke: #d21f3c; stroke-width: 2; stroke-dasharray: 5 3; vector-effect: non-scaling-stroke; opacity: .92; }
+@keyframes puls { 50% { opacity: .45; } }
+@media (prefers-reduced-motion: reduce) { .zona.intreaba { animation: none; } }
+.pin-halou { fill: rgba(210, 31, 60, .25); stroke: #d21f3c; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.pin-miez { fill: #d21f3c; stroke: #fff; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.pin-gresit .pin-halou { fill: rgba(179, 38, 30, .3); stroke: #b3261e; } .pin-gresit .pin-miez { fill: #b3261e; }
+.pin-nod .pin-halou { fill: rgba(210, 31, 60, .1); } .pin-nod .pin-miez { fill: #fff; stroke: #d21f3c; }
+.pin-nr { cursor: pointer; }
+.pin-nr circle { fill: #12355b; stroke: #fff; stroke-width: 2.5; vector-effect: non-scaling-stroke; }
+.pin-nr text { fill: #fff; font-weight: 700; font-family: var(--font); pointer-events: none; }
+.pin-nr.completat circle { fill: #1e6fa8; } .pin-nr:focus { outline: none; } .pin-nr:focus circle { stroke: var(--podis); stroke-width: 5; }
+.pin-nr.corect circle { fill: var(--ok); } .pin-nr.gresit circle { fill: var(--gresit); }
+.link-mic { font: inherit; font-size: .85em; background: none; border: 0; color: var(--mare-2); text-decoration: underline; cursor: pointer; padding: 8px 0; min-height: 40px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.eticheta-chip { font: inherit; font-size: .9em; padding: 8px 14px; min-height: 44px; border-radius: 999px; border: 2px solid var(--linie); background: var(--suprafata); color: var(--text); cursor: pointer; }
+.eticheta-chip[aria-pressed="true"] { border-color: var(--pion); background: var(--podis-pal); font-weight: 700; }
+.eticheta-chip.folosit { opacity: .55; }
+.asocieri { padding-left: 1.6em; margin: 6px 0; display: grid; gap: 6px; }
+.asocieri li { padding: 0; border-radius: 10px; }
+.loc-asociere { font: inherit; width: 100%; text-align: left; padding: 8px 12px; min-height: 44px; border-radius: 10px; border: 2px dashed var(--linie); background: var(--suprafata); color: var(--text); cursor: pointer; }
+.asocieri li.corect .loc-asociere { border: 2px solid var(--ok); } .asocieri li.gresit .loc-asociere { border: 2px solid var(--gresit); }
+.asocieri li.corect::after, .asocieri li.gresit::after { content: none; }
+.fisa-element h2 { margin-top: 0; }
+.lista-atlas .rand-prof.ales { background: var(--podis-pal); }
+.editor-atlas input[type=range] { width: 100%; }
+.btn.mic[aria-pressed="true"] { background: var(--mare); color: #fff; }
+.decupaj { display: block; width: 100%; height: auto; border-radius: 10px; }

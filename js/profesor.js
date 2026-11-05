@@ -4,6 +4,7 @@ import { h, geoSpune, toast, modal } from './ui.js';
 import * as E from './engine.js';
 import { creeaza, NUME_TIP } from './exercises.js';
 import { harta } from './harta.js';
+import { tabCalibrare } from './atlas-calibrare.js';
 
 let deblocat = false;
 const hashPin = async (p) => {
@@ -30,11 +31,11 @@ export function ecranProfesor(app) {
     setTimeout(() => inp.focus(), 0);
     return;
   }
-  const taburi = [['intrebari', '📚 Întrebări'], ['greseli', '📉 Greșeli frecvente'], ['date', '💾 Date și progres'], ['harti', '🗺️ Hărțile testelor']];
+  const taburi = [['intrebari', '📚 Întrebări'], ['greseli', '📉 Greșeli frecvente'], ['date', '💾 Date și progres'], ['harti', '🗺️ Hărțile testelor'], ['atlas', '📍 Calibrare Atlas']];
   const zona = h('div'); let activ = 'intrebari';
   const bar = h('div', { class: 'taburi', role: 'tablist' }, taburi.map(([id, t]) => h('button', { role: 'tab', 'aria-selected': String(id === activ), onclick: (e) => { activ = id; bar.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', String(b === e.currentTarget))); desen(); } }, t)));
   app.append(bar, zona);
-  const desen = () => zona.replaceChildren(({ intrebari: tabIntrebari, greseli: tabGreseli, date: tabDate, harti: tabHarti })[activ]());
+  const desen = () => zona.replaceChildren(({ intrebari: tabIntrebari, greseli: tabGreseli, date: tabDate, harti: tabHarti, atlas: tabCalibrare })[activ]());
   desen();
 }
 
@@ -62,6 +63,7 @@ function tabGreseli() {
   const s = incarca(); const top = Object.entries(s.istoricGreseli).sort((a, b) => b[1] - a[1]).slice(0, 15);
   const toate = E.toateIntrebarile();
   return h('section', { class: 'card' }, geoSpune('Greșelile înregistrate pe acest dispozitiv (de exemplu, tabla din clasă).', 'gandeste'),
+    atlasGreseli(),
     top.length ? h('ol', { class: 'lista-greseli' }, top.map(([id, n]) => { const q = toate.find(x => x.id === id); return h('li', {}, h('strong', {}, `${n}×`), ' ', q ? q.enunt : id, h('small', {}, ` (${id})`)); })) : h('p', {}, 'Încă nu există greșeli înregistrate.'));
 }
 
@@ -93,4 +95,12 @@ function tabHarti() {
       return h('div', {}, h('h3', {}, `Testul nr. ${E.D.harta.harti[id].test}`), harta({ id, marcaje: it.map(x => x.eticheta) }),
         h('ul', { class: 'sol' }, it.map(x => h('li', {}, h('strong', {}, x.eticheta), ' – ', x.corect))));
     })));
+}
+
+function atlasGreseli() {
+  const g = Object.entries(incarca().atlas?.greseli || {}).sort((a, b) => b[1] - a[1]).slice(0, 15);
+  if (!g.length) return null;
+  return h('div', {}, h('h3', {}, 'Atlasul Asiei – cele mai greșite elemente'),
+    h('ol', { class: 'lista-greseli' }, g.map(([id, n]) => { const e = E.D.atlas.elemente.find(x => x.id === id); return h('li', {}, h('strong', {}, `${n}×`), ' ', e ? e.nume : id, h('small', {}, e ? ` (${E.D.atlas.harti[e.harta].nume})` : '')); })),
+    h('h3', {}, 'Itemii din teste'));
 }
