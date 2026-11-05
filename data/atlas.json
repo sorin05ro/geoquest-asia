@@ -2448,7 +2448,7 @@
   {
    "id": "extrem-s-insular",
    "harta": "pozitie",
-   "nume": "Extremitatea sudică insulară (Arhipelagul Indonezian)",
+   "nume": "Insula Roti (extremitatea sudică insulară)",
    "categorie": "punct_extrem",
    "geometrie": {
     "tip": "punct",
@@ -2467,14 +2467,13 @@
      "culoare": "#f9fbfa"
     }
    ],
-   "info": "Punctul cel mai sudic al Asiei, dacă socotim și insulele, se află în sudul Arhipelagului Indonezian. Verificați în manual denumirea exactă folosită la clasă.",
+   "info": "Punctul cel mai sudic al Asiei, dacă socotim și insulele: Insula Roti, la sud-vest de Timor, în Arhipelagul Indonezian.",
    "valoare": null,
    "dificultate": 1,
    "verificat": false,
    "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
    "regiune": "sud-est",
-   "extrem": "S",
-   "de_confirmat": true
+   "extrem": "S"
   },
   {
    "id": "pen-iamal",
