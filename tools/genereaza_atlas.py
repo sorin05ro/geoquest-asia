@@ -142,8 +142,8 @@ el(Z, 'cap-piai', 'Capul Piai (extremitatea sudică a continentului)', 'punct_ex
    'Cel mai sudic punct al continentului asiatic, în Peninsula Malacca (aproximativ 1°16′ N).', extrem='S', regiune='sud-est')
 el(Z, 'extrem-n-insular', 'Extremitatea nordică insulară (Severnaia Zemlia)', 'punct_extrem', P(425, 65, 14), [PIN['n1'], [338, 90, 112, 30]],
    'Punctul cel mai nordic al Asiei, dacă socotim și insulele, se află în arhipelagul Severnaia Zemlia.', extrem='N', regiune='nord')
-el(Z, 'extrem-s-insular', 'Insula Roti (extremitatea sudică insulară)', 'punct_extrem', P(578, 744, 14), [PIN['s2']],
-   'Punctul cel mai sudic al Asiei, dacă socotim și insulele: Insula Roti, la sud-vest de Timor, în Arhipelagul Indonezian.', extrem='S', regiune='sud-est')
+el(Z, 'extrem-s-insular', 'Extremitatea sudică insulară (Arhipelagul Indonezian)', 'punct_extrem', P(578, 744, 14), [PIN['s2']],
+   'Punctul cel mai sudic al Asiei, dacă socotim și insulele, se află în sudul Arhipelagului Indonezian. Verificați în manual denumirea exactă folosită la clasă.', extrem='S', regiune='sud-est', de_confirmat=True)
 # --- peninsule
 el(Z, 'pen-iamal', 'Peninsula Iamal', 'peninsula', P(285, 185, 22), [[266, 152, 28, 66]], 'Peninsulă din nordul Siberiei de Vest, între Marea Kara și Golful Obi, cu mari zăcăminte de gaze naturale.', regiune='nord')
 el(Z, 'pen-taimir', 'Peninsula Taimîr', 'peninsula', P(480, 125, 28), [[444, 122, 82, 22]], 'Cea mai nordică peninsulă a Asiei. Aici se află Capul Celiuskin.', regiune='nord')
